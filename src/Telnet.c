@@ -136,7 +136,6 @@ static void Telnet_client_task(void *pvParameters)
                 int written = send(telnet.sock, rx_buffer + (len - to_write), to_write, 0);
                 if (written < 0) {
                     ESP_LOGE(TAG, "Error occurred during sending: errno %d", errno);
-                    //Telnet_SetStatus(i, Telnet_StatusDisconnect);
                     shutdown(telnet.sock, 0);
                     close(telnet.sock);
                     ESP_LOGW(TAG, "Socket %i closed", telnet.sock);
