@@ -1,6 +1,6 @@
 # esp32-telnet
 
-A telnet implementation for:
+A telnet only implementation for:
 * The platform espressif32
 * Framework espidf
 * example board esp32doit-devkit-v1
